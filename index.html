@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>florae | Gut health tracker</title>
+<meta name="description" content="florae helps you log meals, fibre, symptoms and daily habits, then see how they connect over time. Made by Eira Wellbeing Ltd.">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="florae | Gut health tracker">
+<meta property="og:description" content="Log meals, fibre, symptoms and daily habits, then see how they connect over time.">
+<meta property="og:image" content="https://floraeapp.com/icon.png">
+<meta property="og:url" content="https://floraeapp.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<style>
+  :root {
+    --ink: #1B2A1F;
+    --ink-soft: #4A5E4F;
+    --leaf: #B9DC8E;
+    --leaf-light: #E6F3D2;
+    --mint: #A8E0A0;
+    --berry: #A00B58;
+    --berry-dark: #7E0846;
+    --card: rgba(255, 255, 255, 0.72);
+    --line: rgba(27, 42, 31, 0.12);
+    --font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--ink);
+    line-height: 1.6;
+    background: linear-gradient(180deg, var(--leaf-light) 0%, var(--leaf) 55%, #9FCB78 100%) fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a { color: var(--berry-dark); }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--berry); outline-offset: 3px; border-radius: 6px; }
+  .wrap { width: 100%; max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero { padding: 72px 0 56px; text-align: center; }
+  .icon {
+    width: 112px; height: 112px; border-radius: 26px; display: block; margin: 0 auto 28px;
+    box-shadow: 0 14px 34px rgba(27, 42, 31, 0.22);
+  }
+  h1 { font-size: clamp(40px, 8vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 14px; font-weight: 700; }
+  .tag { font-size: clamp(18px, 3vw, 22px); color: var(--ink-soft); max-width: 36ch; margin: 0 auto 32px; text-wrap: balance; }
+  .btn {
+    display: inline-block; background: var(--ink); color: #fff; text-decoration: none; font-weight: 500;
+    padding: 14px 28px; border-radius: 12px; font-size: 16px;
+  }
+  .btn:hover { background: #000; }
+
+  main { flex: 1; }
+  h2 { font-size: 26px; letter-spacing: -0.01em; margin: 0 0 20px; }
+  section { padding: 24px 0 36px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  .note { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; font-size: 15px; color: var(--ink-soft); }
+  .note strong { color: var(--ink); }
+
+  footer { background: var(--ink); color: #DCE8DE; padding: 36px 0 44px; font-size: 14px; }
+  footer a { color: #fff; }
+  .foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  footer h4 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #9DB5A2; font-weight: 500; }
+  footer p { margin: 0; }
+  .legal { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.14); color: #9DB5A2; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="icon.png" alt="florae app icon" width="112" height="112">
+    <h1>florae</h1>
+    <p class="tag">Understand your gut, one day at a time.</p>
+    <a class="btn" href="https://apps.apple.com/us/app/florae/id6808817653" id="appstore">Download on the App Store</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section aria-labelledby="what">
+      <h2 id="what">What florae does</h2>
+      <p style="max-width:62ch;margin:0 0 24px;">florae is a gut health tracker for iPhone. Log what you eat, how you feel and the habits you keep, and florae shows you how they connect over time.</p>
+      <div class="grid">
+        <div class="card"><h3>Daily gut-habit score</h3><p>A simple score out of 100 for how your day is going, so you can see at a glance where you stand.</p></div>
+        <div class="card"><h3>Food and fibre diary</h3><p>Record meals in seconds and follow your fibre intake against a daily goal.</p></div>
+        <div class="card"><h3>Gut and mind symptoms</h3><p>Note bloating, cramping, reflux and more, plus mood-related symptoms, with a severity rating and a short note.</p></div>
+        <div class="card"><h3>Habits and streaks</h3><p>Build small daily habits such as drinking water, meditating, breathwork and avoiding late-night eating.</p></div>
+        <div class="card"><h3>Trends and charts</h3><p>See fibre intake and symptom severity across the week side by side.</p></div>
+        <div class="card"><h3>Ask in plain language</h3><p>Tell florae what happened or ask a gut health question, and it helps you log it.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="health">
+      <h2 id="health">Please note</h2>
+      <p class="note"><strong>florae is a tracking and wellbeing tool, not a medical device.</strong> It does not diagnose, treat or prevent any condition and is not a substitute for advice from a doctor or other qualified health professional. If you are worried about your health, speak to one.</p>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Support and contact</h2>
+      <p style="margin:0;">Questions, feedback or a problem with the app? Email <a href="mailto:hello@floraeapp.com">hello@floraeapp.com</a>.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Company</h4>
+        <p>Eira Wellbeing Ltd<br>82A James Carter Road<br>Mildenhall, Suffolk IP28 7DE<br>United Kingdom</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:hello@floraeapp.com">hello@floraeapp.com</a></p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p><a href="https://legal.floraeapp.com/privacy.html" id="privacy">Privacy Policy</a><br><a href="https://terms.floraeapp.com" id="terms">Terms of Use</a></p>
+      </div>
+    </div>
+    <p class="legal">&copy; 2026 Eira Wellbeing Ltd. Apple and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>
